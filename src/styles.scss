@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+$accent-color: #ffbc3f;
+$hover-color: darken($accent-color, 10%);
+
+a:hover {
+    cursor: pointer;
+}
+
+footer{
+    overflow: hidden;
+}
+

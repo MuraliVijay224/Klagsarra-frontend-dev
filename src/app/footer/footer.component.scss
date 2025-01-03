@@ -1,0 +1,90 @@
+$accent-color: #ffbc3f;
+$hover-color: darken($accent-color, 10%);
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    
+    h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 0.875rem;
+    }
+  
+    .list-unstyled li {
+      margin-bottom: 0.5rem;
+      a{
+        text-decoration: none !important;
+        font-size:0.8rem
+      }
+
+      a:hover{
+          color: $hover-color !important;
+      }
+    }
+  
+    .input-group {
+      max-width: 400px;
+      margin-top: 1rem;
+  
+      .form-control {
+        border-radius: 0.25rem;
+        border: 1px solid #ddd;
+      }
+  
+      .btn-primary {
+        border-radius: 0.25rem;
+        background-color: #007bff;
+        border: none;
+      }
+    }
+  
+    .bi {
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: $hover-color
+      }
+    }
+  
+    hr {
+      border-top: 1px solid #ddd;
+    }
+  
+    .container {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      .row {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+  
+      .col-md-3 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .subscrive{
+    background-color: #000000;
+    color: white;
+  }
+
+  h5{
+    font-size: 1.2rem !important;
+    font-family: 'Blinker';
+    cursor: default;
+  }
+
+  ul li a {
+    font-size: .6 rem;
+    font-family: 'Blinker';
+  }

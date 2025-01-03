@@ -1,0 +1,60 @@
+<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" [ngClass]="{ active: i === 0 }" *ngFor="let slide of slides; let i = index">
+      <img [src]="slide.image" alt="Image" />
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+        <div class="p-3" style="max-width: 900px;">
+          <h5 class="text-white text-uppercase mb-3">{{ slide.subtitle }}</h5>
+          <h1 class="display-1 text-white mb-md-4">{{ slide.title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+
+<section class="hero-section container-fluid mt-5">
+  <h2 class="section-title">CURATED THIS SEASON</h2>
+  <p class="section-title2">A blend of classic silhouettes and our signature shine, embodied by enigmatic sequins.</p>
+  <div class="card-grid">
+    <a class="card" *ngFor="let card of cards" [href]="card.link">
+      <div class="card__background" [style.background-image]="'url(' + card.imageUrl + ')'">
+      </div>
+      <div class="card__content">
+        <!-- <p class="card__category">{{ card.category }}</p> -->
+        <h3 class="card__heading">{{ card.heading }}</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<div class="fullscreen-video-container p-0 mt-2 mb-2">
+  <video controls autoplay loop>
+    <source src="/clothing-video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<br>
+
+<div class="fullscreen-video-container mt-2 mb-2" style="position: relative;">
+  <video controls autoplay muted loop style="width: 100%; height: auto;">
+    <source src="/clothing-video2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay">
+    <h2 style="margin-bottom: 1rem;">Check Out Our Latest Collection!</h2>
+    <br>
+    <button class="modern-button">Shop Now</button>
+  </div>
+</div>
+

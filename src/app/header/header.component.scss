@@ -1,0 +1,539 @@
+:root {
+    --primary: #06A3DA;
+}
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-bg: #f8f9fa;
+$dark-text: #212529;
+$modal-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+$accent-color: #ffbc3f;
+$hover-color: darken($accent-color, 10%);
+
+/*** Button ***/
+.btn {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    box-shadow: inset 0 0 0 50px transparent;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Blinker';
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    color: #FFFFFF;
+    outline: none;
+    transition: .5s;
+}
+
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: #091E3E;
+}
+
+.navbar-dark .navbar-brand h1 {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #FFFFFF;
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #091E3E;
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-dark {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #FFFFFF;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+.container-fluid {
+    .navbar {
+
+        .navbar-brand {
+            h1 {
+                color: $secondary-color;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+
+                i {
+                    font-size: 1.8rem;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            border: none;
+
+            span {
+                color: $secondary-color;
+                font-size: 1.5rem;
+            }
+        }
+
+        .navbar-nav {
+            .nav-link {
+                color: white;
+                font-size: 1rem;
+                margin: 0 0.5rem;
+
+                &:hover {
+                    color: $hover-color;
+                    transform: scale(1.1);
+                }
+            }
+
+            .btn {
+                i {
+                    font-size: 1.2rem;
+                    color: white;
+                    transition: 0.5s;
+                }
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+
+            button:hover i {
+                color: $hover-color;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/* Show the dropdown menu on hover */
+ .dropdown-menu {
+    display: block;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+.dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+// Responsive Design
+@media (max-width: 992px) {
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                text-align: center;
+                padding: 0.5rem 0;
+                text-transform: uppercase;
+                font-family: 'Parkinsans';
+                letter-spacing: 2px;
+            }
+
+            .dropdown-menu {
+                // position: static;
+                width: 100%;
+
+                .dropdown-item {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        .navbar-brand {
+            h1 {
+                font-size: 1.2rem;
+
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+#navbar {
+    transition: background-color 0.5s ease, padding 0.5s ease;
+    border: none;
+    box-shadow: 0px 1px 5px #8d8d8d42;
+}
+
+#navbar h1 img {
+    transition: max-width 0.3s ease;
+}
+
+#navbar:hover {
+    background-color: black !important;
+}
+
+#searchModal {
+
+    .modal-content {
+        border-radius: 10px;
+        box-shadow: $modal-shadow;
+
+        .modal-header {
+            background-color: $light-bg;
+            border-bottom: none;
+
+            .modal-title {
+                color: black;
+                font-size: 1.5rem;
+                font-weight: 600;
+                font-family: 'Blinker';
+            }
+
+            // .btn-close {
+            //     filter: brightness(0.8);
+
+            //     &:hover {
+            //         filter: brightness(1);
+            //     }
+            // }
+        }
+
+        .modal-body {
+            .input-group {
+                display: flex;
+                align-items: center;
+
+                input {
+                    flex: 1;
+                    padding: 0.75rem;
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px 0 0 5px;
+                    font-size: 1rem;
+                    font-family: 'Blinker';
+
+                    &:focus {
+                        outline: none;
+                        border-color: $primary-color;
+                        box-shadow: 0 0 5px $primary-color;
+                    }
+                }
+
+                button {
+                    background-color: #000000;
+                    color: white;
+                    padding: 0.7rem;
+                    border: none;
+                    border-radius: 0 5px 5px 0;
+                    font-size: 1.25rem;
+                    transition: 0.5s ease-in;
+                }
+            }
+
+            #popularSearches {
+                margin-top: 1rem;
+
+                .badge {
+                    background-color: $secondary-color;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    font-size: 0.9rem;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-family: 'Blinker';
+
+                    &:hover {
+                        background-color: darken($secondary-color, 10%);
+                    }
+                }
+            }
+
+            .btn-outline-primary {
+                border: 1px solid $primary-color;
+                color: $primary-color;
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
+        }
+
+        .modal-footer {
+            background-color: $light-bg;
+            border-top: none;
+
+            button {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                border-radius: 5px;
+
+                &.btn-primary {
+                    background-color: $primary-color;
+                    color: white;
+
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                    }
+                }
+
+                &.btn-secondary {
+                    background-color: $secondary-color;
+                    color: white;
+
+                    &:hover {
+                        background-color: darken($secondary-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler-buttons {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding: 10px;
+    color: #8d8d8d;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    #searchModal {
+        .modal-content {
+            .modal-header .modal-title {
+                font-size: 1.25rem;
+            }
+
+            .modal-body {
+                .input-group {
+                    input {
+                        font-size: 0.9rem;
+                    }
+
+                    button {
+                        font-size: 1rem;
+                    }
+                }
+
+                #popularSearches .badge {
+                    font-size: 0.8rem;
+                    padding: 0.4rem 0.8rem;
+                }
+
+                .btn-outline-primary {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .modal-footer button {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #searchModal {
+        .modal-content {
+            .modal-body {
+                .input-group {
+                    flex-direction: column;
+
+                    input {
+                        border-radius: 5px;
+                        width: 100%;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    button {
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+
+                #popularSearches {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 0.5rem;
+
+                    .badge {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler-buttons {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+        padding: 10px;
+        color: #8d8d8d;
+
+        .fa-heart,
+        .fa-shopping-cart {
+            display: none !important;
+        }
+    }
+}
+
+.search-filter-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.submenus {
+    width: max-content; 
+    padding-right: 1rem;
+    @media (max-width:992px) {
+        padding:1px;
+        width: auto;
+        height: 50vh;
+        overflow-y: scroll;
+    }
+}
+
+
+
+
+.dropdown-item {
+    text-align: center;
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Ensure no text is hidden */
+    text-overflow: clip; /* No ellipsis */
+}
+
+.megamenu .submenus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // gap: 1rem; /* Add spacing between columns for better readability */
+}
+
+.dropdown-header {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: orange;
+    text-transform: capitalize;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    cursor: default;
+}
+.megamenu {
+    max-height: 300px; /* Adjust to your desired height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
