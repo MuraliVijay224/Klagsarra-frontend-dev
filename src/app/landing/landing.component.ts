@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class LandingComponent {
   slides: carousel[] = [
     {
-      image: '/carosel-image1.jpg',
+      image: '/carosel-image5.jpg',
       title: 'Exquisite 2023/24 - Women',
       subtitle: 'An Exquisite amalgamation of Heritage and Modernity inspired by a Timeless piece',
     },
